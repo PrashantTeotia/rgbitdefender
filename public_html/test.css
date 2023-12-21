@@ -1,0 +1,34 @@
+/* Targets all the pages */
+/*@page {
+  size: 8.5in 9in;
+  margin-top: 4in;
+}*/
+
+/* Targets all even-numbered pages */
+@page :left {
+  margin-right: 1%;
+}
+@page {
+  /* margin box at top right showing page number */
+  @top-right {
+    background: red;
+  }
+}
+
+/* Targets all odd-numbered pages */
+/*@page :right {
+  size: 11in;
+  margin-top: 4in;
+}
+
+/* Targets all selectors with `page: wide;` set */
+/*@page wide {
+  size: a4 landscape;
+}
+
+@page {
+  /* margin box at top right showing page number */
+ /* @top-right {
+    content: "Page " counter(pageNumber);
+  }*/
+/*}*/

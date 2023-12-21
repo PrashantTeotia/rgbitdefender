@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<title>testing</title>
+	<style type="text/css">
+    th{
+      width: 100px;
+    }
+    @page {
+  size: portrait;
+  margin: 10%;
+}
+
+section {
+  border:1px solid black;
+  width:794px;
+  height: 1123px;
+  page-break-after: always;
+  break-after: page;
+}
+@media print {
+  button {
+    display: none;
+  }
+}
+
+
+	</style>
+	<link rel="stylesheet" media="print" href="test.css">
+</head>
+<body>
+	<button>Print Webpage</button>
+	<script>
+		const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+  window.print();
+});
+
+	</script>
+  <script type="text/javascript" src="testpage.js"></script>
+</body>
+</html>
