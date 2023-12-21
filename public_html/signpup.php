@@ -28,18 +28,28 @@
 		// }
 		$showmessage=false;
 		$err=false;
-		$exits = false;
-		if($password == $cpassword && $exits == false){
+		//$exits = false;
+		$existsql="SELECT * FROM accounttable WHERE username='$username'";
+		$result = mysqli_query($conn,$existsql);
+		$numExistRows=mysqli_num_rows($result);
+		if($numExistRows>0){
+			//$exits=true;
+			echo "<div class='error'><b> account not created Username Already Exists</b></div>";
+		}else{
+			$exits=false;
+		if($password == $cpassword){
 			$sql = "INSERT INTO accounttable (`username`, `password`,`cpassword`,`date`) VALUES ('$username','$password','$cpassword',current_timestamp())";
 			$result = mysqli_query($conn,$sql);
-		}
+		
 		if($result){
 			$showmessage=true;
 			echo "<div class='successful'><b>successfully account created...</b></div>";
+		}
 		}else{
-			$err = true;
+			//$err = true;
 			echo "<div class='error'><b> account not created</b></div>";
 		}
+	}
 	}
 	?>
 	<?php require '_nav.php'?>
