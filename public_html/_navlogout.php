@@ -6,7 +6,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="_nav.css"> -->
 	<title>Nav</title>
 	<style type="text/css">
-		.nav-logout{position: absolute;top:0px;left:260px;background: rgb(235, 10, 10);width:1030px;color: rgb(255,255,255);font-weight: bolder;font-family: sans-serif;letter-spacing: 1;border-radius:6px;}
+		.nav-logout{position: absolute;top:0px;left:260px;background:rgb(255, 130, 91);width:986px;color: rgb(255,255,255);font-weight: bolder;font-family: sans-serif;letter-spacing: 1;border-radius:6px;}
 	</style>
 </head>
 <body>

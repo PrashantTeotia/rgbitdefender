@@ -41,6 +41,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 		width:250px;
 		height: 500px;
 		margin-left: -10px;margin-top: -10px;
+		border:1px solid #a4a4a4;
 		z-index: 1;
 		background: rgb(240, 240, 240);
 		padding-top: 146px;
@@ -60,11 +61,13 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 	}
 	span{
-		width: 230px;
+		width: 196px;
 		text-align: center;
-		background: rgb(37, 240, 221);
+		background: rgb(230, 230, 230);
 		color: rgb( 113,105 ,105);
 		font-weight: bolder;
+		border:1px solid #b0b0b0;
+		margin-left:16px;
 		font-family: sans-serif;
 		padding: 10px 10px 10px 10px;
 		border-top-right-radius: 5px;
@@ -111,7 +114,7 @@ background: var(--main-background);
 	}
 	.firstbox h6{
 		color:#575353;
-		text-align: right;
+		text-align: center;
 		position: absolute;
 		left: 75px;
 		z-index: 10;
@@ -127,6 +130,7 @@ background: var(--main-background);
 	}
 	.firstbox::before{
 		    content: '';
+			border:1px solid grey;
 			position: absolute;
 			width:40px;
 			height: 240px;
@@ -137,6 +141,7 @@ background: var(--main-background);
 		content: '';
 		position: absolute;
 		inset: 2px;
+		border:1px solid grey;
 /*		background: rgb( 58, 56, 55 );*/
 background: var(--main-background);
 		border-radius: 4px;
@@ -171,6 +176,7 @@ background: var(--main-background);
 	.firstbox1::after{
 		content: '';
 		position: absolute;
+		border:1px solid grey;
 		inset: 2px;
 /*		background: rgb( 58, 56, 55 );*/
 background: var(--main-background);
@@ -347,7 +353,7 @@ background: var(--main-background);
 		z-index: 10;
 	}
 	.firstbox5{
-		width:170px;
+		width:117px;
 		height: 40px;
 /*		background: rgb( 58, 56, 55 );*/
 background: var(--main-background);
@@ -372,6 +378,8 @@ background: var(--main-background);
 		content: '';
 		position: absolute;
 		inset: 2px;
+		border:1px solid grey;
+		text-align:center;
 /*		background: rgb( 58, 56, 55 );*/
 background: var(--main-background);
 		border-radius: 4px;
@@ -388,7 +396,7 @@ background: var(--main-background);
 	}
 	.firstbox5 h6{
 		color:#575353;
-		text-align: right;
+		text-align: center;
 		position: absolute;
 		left: 45px;
 		z-index: 10;
@@ -942,7 +950,7 @@ background: var(--main-background);
 /*		background: rgb( 69, 69, 69 );*/
 background: rgb(249, 249, 249);
 		border-radius: 3px;
-		box-shadow: 0px 0px 20px 0.1px rgb(227, 227, 227);
+		box-shadow: 0px 0px 0px 1px rgb(227, 227, 227);
 		position: absolute;
 		top:360px;
 		left: 280px;
@@ -953,37 +961,26 @@ background: rgb(249, 249, 249);
 /*		background: rgb( 69, 69, 69 );*/
 background: rgb(249, 249, 249);
 		border-radius: 3px;
-		box-shadow: 0px 0px 20px 0.1px rgb(227, 227, 227);
+		box-shadow: 0px 0px 0px 1px rgb(227, 227, 227);
 		position: absolute;
 		top:470px;
 		left: 280px;
 		width: 400px;
 		height: 100px;
 	}
-/*	#threefile{
-/*		background: rgb( 69, 69, 69 );*/
-/*background:rgb( 223, 222, 222 );
-		border-radius: 3px;
-		box-shadow: 0px 0px 4px 0.1px rgb( 47, 47, 47 );
-		position: absolute;
-		top:350px;
-		left: 280px;
-		width: 930px;
-		height: 160px;*/
-	}*/
 	h5{font-size: 12px;}
 	a{
 		text-decoration: none;
 	}
 	.demo-pdf{position: absolute;top:310px;left:300px;color:#df3737;font-family: sans-serif;font-size: 9px;text-shadow: 2px 2px 4px grey;}
-	#dashboard{width:1030px;background:rgba(238, 233, 233);height: 260px;position: absolute;top:50px;left:270px;box-shadow: 0px 0px 20px 1px #dbdbdb;border-radius: 5px;}
+	#dashboard{width:1030px;background:rgba(238, 233, 233);height: 260px;position: absolute;top:50px;left:270px;box-shadow: 0px 0px 0px 1px #dbdbdb;border-radius: 5px;}
 	.box1{margin:10px; text-align: center;width:200px;font-family: sans-serif;font-size: 11px;font-weight: bolder;}
 	.accountinformation{width:200px;height: 10px;border-radius: 4px;background-color: rgb(196, 193, 193);margin:10px;}
 	.accountinformation1{width:120px;height: 8px;border-radius: 4px;background-color: rgb(  248, 55, 28  );margin-top: 1px;box-shadow: 0px 0px 6px 0.1px rgb( 255, 31, 0 )}
 	.percentage{line-height: 21px;}
 /*	#demo{position: absolute;top:30px;left:270px;width:60%;height:95%;background: rgb( 246, 245, 245 );box-shadow: 0px 0px 3px 0.1px rgb(  46, 41, 41 );}*/
 /*	svg circle{ fill:red; }*/
-#info{width: 600px;height: 270px;background:rgb(242,242,242);border-radius:6px;position: absolute;top:278px;left:430px;box-shadow: 0px 0px 30px 1px #f4f4f4;}
+#info{width: 600px;height: 270px;background:rgb(242,242,242);border-radius:6px;position: absolute;top:278px;left:430px;box-shadow: 0px 0px 0px 1px #f4f4f4;border:1px solid grey;}
 #graphy{width:2px;height: 200px;background-color: rgb(115, 115, 115);position:absolute;left:60px;top:20px;}
 #graphx{width:300px;height: 2px;background-color: rgb(115, 115, 115);position:absolute;left:60px;top:218px;}
 #defx{color: rgb(123, 121, 121) ;font-family: sans-serif;position: absolute;top:236px;left: 111px;font-weight: bolder;font-size: 14px;}
@@ -1027,11 +1024,11 @@ i{color:green;}
 	<div id="twofile"><h5 style="position: absolute;top:-10px;left: 10px;font-family: sans-serif;color: rgb( 38, 36, 36);">2-File Merge Report Generate<h5></div>
 	<!-- <div id="threefile"><h5 style="position: absolute;top:-10px;left: 10px;font-family: sans-serif;color: rgb( 38, 36, 36);">3-File Merge Report Generate<h5></div> -->
 	<a href="upload_file.php"><div class="firstbox">
-		<img src="upload-images/email.png" width="25px" height="25px" style="border-radius:5px;" />
+		<!-- <img src="upload-images/email.png" width="25px" height="25px" style="border-radius:5px;" /> -->
 		<h6>Click</h6>
 	</div></a>	
 	<a href="testmergefile2.php"><div class="firstbox5">
-		<img src="upload-images/skyscanner.png" width="22px" height="22" style="border-radius:5px;" />
+		<!-- <img src="upload-images/skyscanner.png" width="22px" height="22" style="border-radius:5px;" /> -->
 		<h6>Click</h6>
 		<!-- <img src="upload-images/email.png" width="22" height="22" style="position: relative;top:0px;left: 70px;border-radius:5px;" /> -->
 	</div></a>
