@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="_nav.css">
 	<link rel="stylesheet" type="text/css" href="signup.css">
 	<title>signup</title>
-	<style>h1{color:#434b53;}body{background-color: #c1c6ca;}.successful{width:100%;height: 20px;background-color:rgb( 180, 255, 160 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}.error{width:100%;height: 20px;background-color:rgb( 254, 84, 76 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}label{font-weight: bolder;}</style>
+	<style>h1{color:#434b53;}body{background-image:url('software-images/pexels-lukas-590016.jpg');background-size:100% 190%; background-repeat: no-repeat;}.successful{width:100%;height: 20px;background-color:rgb( 180, 255, 160 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}.error{width:100%;height: 20px;background-color:rgb( 254, 84, 76 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}label{font-weight: bolder;}</style>
 </head>
 <body>
 	<?php
@@ -22,18 +22,12 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$cpassword = $_POST['cpassword'];
-
-		// if(isset($username=$_POST['username']) || isset($password=$_POST['password'])|| isset($cpassword=$_POST['cpassword'])){
-		// 	echo "ok";
-		// }
 		$showmessage=false;
 		$err=false;
-		//$exits = false;
 		$existsql="SELECT * FROM accounttable WHERE username='$username'";
 		$result = mysqli_query($conn,$existsql);
 		$numExistRows=mysqli_num_rows($result);
 		if($numExistRows>0){
-			//$exits=true;
 			echo "<div class='error'><b> account not created Username Already Exists</b></div>";
 		}else{
 			$exits=false;
@@ -46,7 +40,6 @@
 			echo "<div class='successful'><b>successfully account created...</b></div>";
 		}
 		}else{
-			//$err = true;
 			echo "<div class='error'><b> account not created</b></div>";
 		}
 	}

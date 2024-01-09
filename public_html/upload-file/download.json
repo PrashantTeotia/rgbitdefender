@@ -1,0 +1,703 @@
+{
+  "glob" : 1,
+  "platform" : "android",
+  "report" : {
+    "jsonVersion" : "https://json-schema.org/draft/2020-12/schema",
+    "contentInformation" : {
+      "copyright" : "Copyright 2023 bitdefender"
+    },
+    "appProperties" : {
+      "name" : "FCB",
+      "version" : "1.2.1",
+      "versionCode" : "8",
+      "packageName" : "com.common.fcbbrosnp",
+      "platform" : "android",
+      "md5" : "ec30e4ba5c10b24c6f7641d73d5174d5",
+      "sha1" : "edbb867e2f323138758c2b3ddc5263b76f035adc",
+      "sha256" : "7ff90d6ca33cdafb32c5517951d1f33193c7564ce9dbbb805b5b875254807556",
+      "packageSize" : 4731138,
+      "sdkVersion" : 24,
+      "extra" : {
+        "itunesAppID" : ""
+      }
+    },
+    "riskProfile" : {
+      "privacyRisk" : 15,
+      "securityRisk" : 35,
+      "overallRisk" : "Medium",
+      "malwareDetection" : "",
+      "malwareFamily" : "",
+      "malwareName" : ""
+    },
+    "scanVersion" : {
+      "scanEngine" : "2.6.7",
+      "scanTargetOS" : "android",
+      "ruleVersion" : "75c7a8bb2e7a7d3a105458ea76e9261f",
+      "scanSucces" : "Done",
+      "scanDateTime" : "2023-12-28T18:43:16+0000",
+      "scoreDateTime" : "2023-12-28T18:43:15+0000",
+      "dynamicScan" : true,
+      "dynamicScanDateTime" : "2023-12-28T18:43:06+0000"
+    },
+    "androidAnalysis" : {
+      "launcherActivity" : [ {
+        "class" : "com.common.bbh.CommonSplashActivity"
+      } ],
+      "activity" : [ {
+        "class" : "com.common.bbh.CommonSplashActivity"
+      }, {
+        "class" : "com.common.bbh.CommonMainActivity"
+      } ],
+      "activityAlias" : [ ],
+      "provider" : [ {
+        "class" : "androidx.startup.InitializationProvider",
+        "access" : "private"
+      } ],
+      "service" : [ ],
+      "receiver" : [ ],
+      "appQueries" : {
+        "packages" : [ ],
+        "schemes" : [ ],
+        "providers" : [ ]
+      },
+      "permission" : [ ],
+      "usesPermission" : [ {
+        "kind" : "android.permission.INTERNET",
+        "description" : "This application can create network sockets and use custom network protocols. The browser and other applications provide means to send data to the internet, so this permission is not required to send data to the internet. ",
+        "dangerous" : true
+      }, {
+        "kind" : "android.permission.ACCESS_NETWORK_STATE",
+        "description" : "This permission will allow the application to read the state of the networks the device is connected to.",
+        "dangerous" : false
+      }, {
+        "kind" : "android.permission.ACCESS_WIFI_STATE",
+        "description" : "This permission will allow the application to obtain all information on all Wi-Fi networks within range. ",
+        "dangerous" : false
+      }, {
+        "kind" : "android.permission.READ_EXTERNAL_STORAGE",
+        "description" : "This application can read from external storage mediums such as SD Cards.",
+        "dangerous" : true
+      }, {
+        "kind" : "android.permission.READ_MEDIA_IMAGES",
+        "description" : "Allows an application to read image files from external storage",
+        "dangerous" : false
+      }, {
+        "kind" : "android.permission.WAKE_LOCK",
+        "description" : "This application can keep the device from going into sleep mode. If used improperly this could drain the device's power.",
+        "dangerous" : true
+      } ],
+      "usesFeature" : [ ],
+      "usesLibrary" : [ ],
+      "metaData" : [ ],
+      "thirdParty" : [ {
+        "name" : "Kotlin",
+        "description" : "This app references the Kotlin framework. Kotlin  is a statically typed programming language for modern multi-platform applications",
+        "referenceURL" : [ "https://kotlinlang.org/" ],
+        "type" : "Development Platform"
+      } ],
+      "elfList" : [ ],
+      "sdks" : [ ]
+    },
+    "scanDetails" : [ {
+      "riskType" : "privacy",
+      "kind" : "Backup",
+      "description" : "This app has enabled the backup feature in Android. The backup data may expose sensitive information which potentially could be accessed by an adversary.",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-359: Exposure of Private Personal Information to an Unauthorized Actor",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/359.html"
+      }, {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-538: Insertion of Sensitive Information into Externally-Accessible File or Directory",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/538.html"
+      }, {
+        "kind" : "HIPAA",
+        "riskCategory" : "Access control",
+        "registrationNumber" : "§164.312(a)(1)",
+        "webLink" : "https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/administrative/securityrule/techsafeguards.pdf",
+        "riskDescription" : "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in §164.308(a)(4)."
+      }, {
+        "kind" : "MASVS",
+        "riskCategory" : "V2: Data Storage and Privacy Requirements",
+        "registrationNumber" : "MSTG-STORAGE-8",
+        "webLink" : "https://github.com/OWASP/owasp-masvs/releases/",
+        "riskDescription" : "No sensitive data is included in backups generated by the mobile operating system."
+      }, {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m2-insecure-data-storage",
+        "riskName" : "Backup Enabled",
+        "riskDescription" : "This app has enabled the backup feature in Android. The backup data may expose sensitive information which potentially could be accessed by an adversary.",
+        "riskLevel" : "Medium"
+      } ]
+    }, {
+      "riskType" : "privacy",
+      "kind" : "Content",
+      "description" : "This app can access and read the contents of the global clipboard.",
+      "location" : [ "com.common.bbh.CommonMainActivity" ],
+      "importance" : "Medium",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "privacy",
+      "kind" : "Logging",
+      "description" : "The application writes information to the system log. This can result in unintended information leakage, however it cannot be automatically determined whether the logged data is sensitive.",
+      "location" : [ "com.common.bbh.CommonMainActivity$setChromeClient$1", "com.common.bbh.CommonMainActivity$createWebView$3", "com.common.bbh.CommonMainActivity" ],
+      "importance" : "Medium",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-532: Insertion of Sensitive Information into Log File",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/532.html"
+      }, {
+        "kind" : "MASVS",
+        "riskCategory" : "V2: Data Storage and Privacy Requirements",
+        "registrationNumber" : "MSTG-STORAGE-3",
+        "webLink" : "https://github.com/OWASP/owasp-masvs/releases/",
+        "riskDescription" : "No sensitive data is written to application logs."
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Code Analysis",
+      "description" : "This application certificate has been signed with a weak APK Signature Scheme.",
+      "location" : [ ],
+      "importance" : "High",
+      "compliance" : [ {
+        "kind" : "MASVS",
+        "riskCategory" : "V7: Code Quality and Build Setting Requirements",
+        "registrationNumber" : "MSTG-CODE-1",
+        "webLink" : "https://github.com/OWASP/owasp-masvs/releases/",
+        "riskDescription" : "The app is signed and provisioned with a valid certificate, of which the private key is properly protected."
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Binary Protections Testing",
+      "description" : "The app can be tampered with easily. It contains readable method names, has been signed with a weak APK Signature Scheme, and appears not to be using any known code obfuscation tools.",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m9-reverse-engineering",
+        "riskName" : "APK Can Be Easily Tampered",
+        "riskDescription" : "The app can be tampered with easily. It contains readable method names, has been signed with a weak APK Signature Scheme, and appears not to be using any known code obfuscation tools.",
+        "riskLevel" : "Medium"
+      } ]
+    }, {
+      "riskType" : "privacy",
+      "kind" : "Network",
+      "description" : "This permission will allow the application to read the state of the networks the device is connected to.",
+      "location" : [ "android.permission.ACCESS_NETWORK_STATE" ],
+      "importance" : "Low",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "privacy",
+      "kind" : "Network",
+      "description" : "This permission will allow the application to obtain all information on all Wi-Fi networks within range. ",
+      "location" : [ "android.permission.ACCESS_WIFI_STATE" ],
+      "importance" : "Low",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "privacy",
+      "kind" : "Storage",
+      "description" : "This application can read from external storage mediums such as SD Cards.",
+      "location" : [ "android.permission.READ_EXTERNAL_STORAGE" ],
+      "importance" : "Low",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Vulnerability",
+      "description" : "A hardcoded secret has been detected.",
+      "location" : [ "kotlin.text.StringsKt__StringsKt", "kotlin.io.path.PathsKt__PathUtilsKt" ],
+      "importance" : "Medium",
+      "compliance" : [ {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m6-insecure-authorization",
+        "riskName" : "Hardcoded Secrets Detected",
+        "riskDescription" : "Secrets can be extracted and used for other purposes outside of the app.",
+        "riskLevel" : "Medium"
+      } ]
+    }, {
+      "riskType" : "privacy",
+      "kind" : "WebView",
+      "description" : "This application has enabled WebView the ability to expose data within the application that could be exploited by malicious javascript.",
+      "location" : [ "com.common.bbh.CommonMainActivity" ],
+      "importance" : "Medium",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/200.html"
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Binary Protections Testing",
+      "description" : "This application is exposing function and method names by not obfuscating some or all of the code. When testing is performed on this application against the OWASP Mobile Top 10 this application fails the category M9: Reverse Engineering.",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/200.html"
+      }, {
+        "kind" : "HIPAA",
+        "riskCategory" : "Access control",
+        "registrationNumber" : "§164.312(a)(1)",
+        "webLink" : "https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/administrative/securityrule/techsafeguards.pdf",
+        "riskDescription" : "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in §164.308(a)(4)."
+      }, {
+        "kind" : "PCI",
+        "riskCategory" : "Develop and maintain secure systems and applications",
+        "registrationNumber" : "6.5",
+        "webLink" : "https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-2-1.pdf",
+        "riskDescription" : "The application layer is high-risk and may be targeted by both internal and external threats. \r\nRequirements 6.5.1 through 6.5.10 are the minimum controls that should be in place, and organizations should incorporate the relevant secure coding practices as applicable to the particular technology in their environment.\r\nApplication developers should be properly trained to identify and resolve issues related to these (and other) common coding vulnerabilities. Having staff knowledgeable of secure coding guidelines should minimize the number of security vulnerabilities introduced through poor coding practices. Training for developers may be provided in-house or by third parties and should be applicable for technology used.\r\nAs industry-accepted secure coding practices change, organizational coding practices and developer training should likewise be updated to address new threats—for example, memory scraping attacks.\r\nThe vulnerabilities identified in 6.5.1 through 6.5.10 provide a minimum baseline. It is up to the organization to remain up to date with vulnerability trends and incorporate appropriate measures into their secure coding practices."
+      }, {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m9-reverse-engineering",
+        "riskName" : "Exposed Function Names",
+        "riskDescription" : "The function names used within the code are readable and may provide information to an adversary on the inner workings of the application.",
+        "riskLevel" : "Informational"
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Binary Protections Testing",
+      "description" : "This application fails the static data exposure test as outlined by OWASP Mobile Top 10 discussed under section M9: Reverse Engineering.",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/200.html"
+      }, {
+        "kind" : "HIPAA",
+        "riskCategory" : "Access control",
+        "registrationNumber" : "§164.312(a)(1)",
+        "webLink" : "https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/administrative/securityrule/techsafeguards.pdf",
+        "riskDescription" : "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in §164.308(a)(4)."
+      }, {
+        "kind" : "PCI",
+        "riskCategory" : "Develop and maintain secure systems and applications",
+        "registrationNumber" : "6.5",
+        "webLink" : "https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-2-1.pdf",
+        "riskDescription" : "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in §164.308(a)(4)."
+      }, {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m9-reverse-engineering",
+        "riskName" : "Static Data Exposure",
+        "riskDescription" : "This application is susceptible to reverse engineering. During analysis the classes, method names, strings and resources were available to inspect. It is recommended that all data in the application be obfuscated so they are not easily readable. Good obfuscation practices will prevent de-obfuscation from tools such as IDA Pro and Hopper. ",
+        "riskLevel" : "Low"
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Binary Protections Testing",
+      "description" : "This application exposes source level metadata symbols and fails the testing outlined by OWASP Mobile Top 10 covered under category M9: Reverse Engineering",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/200.html"
+      }, {
+        "kind" : "HIPAA",
+        "riskCategory" : "Access control",
+        "registrationNumber" : "§164.312(a)(1)",
+        "webLink" : "https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/administrative/securityrule/techsafeguards.pdf",
+        "riskDescription" : "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in §164.308(a)(4)."
+      }, {
+        "kind" : "PCI",
+        "riskCategory" : "Develop and maintain secure systems and applications",
+        "registrationNumber" : "6.5",
+        "webLink" : "Address common coding vulnerabilities in software-development processes as follows:\r\n• Train developers at least annually in upto-date secure coding techniques, including how to avoid common coding vulnerabilities.\r\n• Develop applications based on secure coding guidelines.",
+        "riskDescription" : "The application layer is high-risk and may be targeted by both internal and external threats. \r\nRequirements 6.5.1 through 6.5.10 are the minimum controls that should be in place, and organizations should incorporate the relevant secure coding practices as applicable to the particular technology in their environment.\r\nApplication developers should be properly trained to identify and resolve issues related to these (and other) common coding vulnerabilities. Having staff knowledgeable of secure coding guidelines should minimize the number of security vulnerabilities introduced through poor coding practices. Training for developers may be provided in-house or by third parties and should be applicable for technology used.\r\nAs industry-accepted secure coding practices change, organizational coding practices and developer training should likewise be updated to address new threats—for example, memory scraping attacks.\r\nThe vulnerabilities identified in 6.5.1 through 6.5.10 provide a minimum baseline. It is up to the organization to remain up to date with vulnerability trends and incorporate appropriate measures into their secure coding practices."
+      }, {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m9-reverse-engineering",
+        "riskName" : "Symbol Exposure",
+        "riskDescription" : "This application exposes source level metadata symbols and fails the testing outlined by OWASP Mobile Top 10 covered under category M9: Reverse Engineering",
+        "riskLevel" : "Informational"
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Binary Protections Testing",
+      "description" : "This application fails the source code reverse engineering exposure test as outlined by OWASP Mobile Top 10 discussed under section M9: Reverse Engineering.",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/200.html"
+      }, {
+        "kind" : "HIPAA",
+        "riskCategory" : "Access control",
+        "registrationNumber" : "§164.312(a)(1)",
+        "webLink" : "https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/administrative/securityrule/techsafeguards.pdf",
+        "riskDescription" : "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in §164.308(a)(4)."
+      }, {
+        "kind" : "PCI",
+        "riskCategory" : "Develop and maintain secure systems and applications",
+        "registrationNumber" : "6.5",
+        "webLink" : "https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-2-1.pdf",
+        "riskDescription" : "The application layer is high-risk and may be targeted by both internal and external threats. \r\nRequirements 6.5.1 through 6.5.10 are the minimum controls that should be in place, and organizations should incorporate the relevant secure coding practices as applicable to the particular technology in their environment.\r\nApplication developers should be properly trained to identify and resolve issues related to these (and other) common coding vulnerabilities. Having staff knowledgeable of secure coding guidelines should minimize the number of security vulnerabilities introduced through poor coding practices. Training for developers may be provided in-house or by third parties and should be applicable for technology used.\r\nAs industry-accepted secure coding practices change, organizational coding practices and developer training should likewise be updated to address new threats—for example, memory scraping attacks.\r\nThe vulnerabilities identified in 6.5.1 through 6.5.10 provide a minimum baseline. It is up to the organization to remain up to date with vulnerability trends and incorporate appropriate measures into their secure coding practices."
+      }, {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m9-reverse-engineering",
+        "riskName" : "Source Code Exposure",
+        "riskDescription" : "This application fails the source code reverse engineering exposure test as outlined by OWASP Mobile Top 10 discussed under section M9: Reverse Engineering.",
+        "riskLevel" : "Informational"
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Binary Protections Testing",
+      "description" : "This application does not make a check to determine if the device the app is running on is rooted.",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-693: Protection Mechanism Failure",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/693.html"
+      }, {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m8-code-tampering",
+        "riskName" : "No Root Detection",
+        "riskDescription" : "This application does not make a check to determine if the device the app is running on is rooted.",
+        "riskLevel" : "Informational"
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Network Security",
+      "description" : "The application is not implementing certificate pinning on any domain it communicates with.",
+      "location" : [ ],
+      "importance" : "Low",
+      "compliance" : [ {
+        "kind" : "CVE",
+        "registrationNumber" : "CVE-2017-9968",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://nvd.nist.gov/vuln/detail/CVE-2017-9968"
+      }, {
+        "kind" : "CVE",
+        "registrationNumber" : "CVE-2018-20200",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://nvd.nist.gov/vuln/detail/CVE-2018-20200"
+      }, {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-295",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "CWE-295: Improper Certificate Validation"
+      }, {
+        "kind" : "GDPR",
+        "riskName" : "No Certificate Pinning",
+        "registrationNumber" : "Article 32",
+        "webLink" : "https://gdpr.eu/article-32-security-of-processing/",
+        "riskCategory" : "Data Security",
+        "riskSubcategory" : "Data In Motion",
+        "riskDescription" : "Article 32, Section 1.a states:  \"The pseudonymisation and encryption of personal data\". \r\nArticle 32, section 1.b states:  \"The ability to ensure the ongoing confidentiality, integrity, availability, and resilience of processing systems and services\". \r\nWhile pinning an SSL certificate to a domain is not a requirement for GDPR, it does provide an enhanced level of trust that the encryption, confidentiality, and integrity of the communication can be trusted."
+      }, {
+        "kind" : "MASVS",
+        "riskCategory" : "V5: Network Communication Requirements",
+        "registrationNumber" : "MSTG-NETWORK-4",
+        "webLink" : "https://github.com/OWASP/owasp-masvs/releases/",
+        "riskDescription" : "The app either uses its own certificate store, or pins the endpoint certificate or public key, and subsequently does not establish connections with endpoints that offer a different certificate or key, even if signed by a trusted CA."
+      }, {
+        "kind" : "OWASP",
+        "webLink" : "https://owasp.org/www-project-mobile-top-10/2016-risks/m3-insecure-communication",
+        "riskName" : "No Certificate Pinning Detected",
+        "riskDescription" : "Certificate Pinning is the process of associating a host with their expected X509 certificate or public key. Once a certificate or public key is known or seen for a host, the certificate or public key is associated or 'pinned' to the host. \r\n\r\nPinning leverages knowledge of the pre-existing relationship between the user and an organization or service to help make better security related decisions. Because you already have information on the server or service, you don't need to rely on generalized mechanisms meant to solve the key distribution problem. \r\n",
+        "riskLevel" : "Medium"
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Markets",
+      "description" : "This app was not found on Google Market.",
+      "location" : [ "Date checked: 28 Dec 2023" ],
+      "importance" : "Low",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Network",
+      "description" : "This application can create network sockets and use custom network protocols. The browser and other applications provide means to send data to the internet, so this permission is not required to send data to the internet. ",
+      "location" : [ "android.permission.INTERNET" ],
+      "importance" : "Low",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "security",
+      "kind" : "System",
+      "description" : "This application can keep the device from going into sleep mode. If used improperly this could drain the device's power.",
+      "location" : [ "android.permission.WAKE_LOCK" ],
+      "importance" : "Low",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Cryptography",
+      "description" : "The application is using an insecure random number generator.",
+      "location" : [ "kotlin.random.jdk8.PlatformThreadLocalRandom", "kotlin.collections.CollectionsKt__MutableCollectionsKt", "kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$asList$4", "kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$asList$3", "kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$asList$2", "kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$asList$1", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$8", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$7", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$4", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$3", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$2", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$1", "kotlin.collections.CollectionsKt__CollectionsJVMKt", "kotlin.collections.RingBuffer", "kotlin.collections.CollectionsKt__MutableCollectionsJVMKt", "kotlin.collections.EmptyList", "kotlin.collections.MovingSubList", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$6", "kotlin.collections.ArraysKt___ArraysJvmKt$asList$5", "kotlin.collections.AbstractList", "kotlin.collections.builders.ListBuilder", "kotlin.collections.CollectionsKt___CollectionsKt" ],
+      "importance" : "Medium",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-330: Use of Insufficiently Random Values",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/330.html"
+      }, {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-1241",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/1241.html"
+      }, {
+        "kind" : "MASVS",
+        "riskCategory" : "V3: Cryptography Requirements",
+        "registrationNumber" : "MSTG-CRYPTO-6",
+        "webLink" : "https://github.com/OWASP/owasp-masvs/blob/master/Document/0x08-V3-Cryptography_Verification_Requirements.md",
+        "riskDescription" : "All random values are generated using a sufficiently secure random number generator."
+      } ]
+    }, {
+      "riskType" : "security",
+      "kind" : "Code Analysis",
+      "description" : "This app uses Java code reflection. Reflection enables a Java program to analyze and modify itself. An attacker can create unexpected control flow paths through the application, potentially by-passing security checks. Exploitation of this weakness can result in a limited form of code injection.",
+      "location" : [ "kotlin.reflect.TypeVariableImpl", "kotlin.reflect.ParameterizedTypeImpl", "kotlin.reflect.GenericArrayTypeImpl", "kotlin.reflect.TypesJVMKt", "kotlin.reflect.ParameterizedTypeImpl$getTypeName$1$1", "kotlin.reflect.WildcardTypeImpl", "kotlin.reflect.TypeImpl", "kotlin.jvm.internal.CollectionToArray", "kotlin.jvm.internal.KTypeBase", "kotlin.collections.ArraysKt__ArraysJVMKt", "kotlin.internal.PlatformImplementations", "kotlin.coroutines.jvm.internal.DebugMetadataKt", "kotlin.coroutines.jvm.internal.ModuleNameRetriever" ],
+      "importance" : "Medium",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "security",
+      "kind" : "File System",
+      "description" : "The app utilizes the Java.io.File delete() method to perform a file deletion. This method is not a secure method of file deletion. Because the Android API does not provide a method to perform secure file deletion operations it is suggested to overwrite the file with random characters before performing the file delete operation when sensitive data is involved. Files are only marked for deletion and can be recovered using third-party utilities on a rooted device. ",
+      "location" : [ "kotlin.io.FilesKt__UtilsKt" ],
+      "importance" : "Low",
+      "compliance" : [ ]
+    }, {
+      "riskType" : "security",
+      "kind" : "WebView",
+      "description" : "The application enables WebView to execute JavaScript code. This could potentially allow an attacker to introduce arbitrary JavaScript code to perform malicious actions.",
+      "location" : [ "com.common.bbh.CommonMainActivity" ],
+      "importance" : "High",
+      "compliance" : [ {
+        "kind" : "CWE",
+        "registrationNumber" : "CWE-830: Inclusion of Web Functionality from an Untrusted Source",
+        "riskName" : "",
+        "riskCategory" : "",
+        "riskSubcategory" : "",
+        "riskDescription" : "",
+        "webLink" : "https://cwe.mitre.org/data/definitions/830.html"
+      }, {
+        "kind" : "MASVS",
+        "riskCategory" : "V6: Platform Interaction Requirements",
+        "registrationNumber" : "MSTG-PLATFORM-5",
+        "webLink" : "https://github.com/OWASP/owasp-masvs/releases/",
+        "riskDescription" : "JavaScript is disabled in WebViews unless explicitly required."
+      } ]
+    } ],
+    "certificate" : {
+      "SHA1 fingerprint" : "26b02d233509f4aecf56980032343456ceab722a",
+      "SHA256 fingerprint" : "492682f877607ee99df2ddd2bd5953fd727bdf6e19d397de9dbbafd582bcad75",
+      "issuer" : {
+        "CN" : "np",
+        "OU" : "np",
+        "O" : "np",
+        "L" : "南京",
+        "ST" : "江苏",
+        "C" : "中国"
+      },
+      "owner" : {
+        "CN" : "np",
+        "OU" : "np",
+        "O" : "np",
+        "L" : "南京",
+        "ST" : "江苏",
+        "C" : "中国"
+      },
+      "serialNumber" : "45ff9a3",
+      "validFrom" : "2021-04-25T09:03:56+0000",
+      "validTo" : "3020-08-26T09:03:56+0000"
+    },
+    "distribution" : {
+      "marketData" : [ [ ] ]
+    },
+    "vulnerabilities" : { },
+    "communications" : {
+      "schemes" : [ "https" ],
+      "URI" : [ {
+        "source" : [ ],
+        "classificationCategory" : [ "Phishing" ],
+        "findings" : {
+          "expCheck" : false,
+          "hasProblem" : true,
+          "validChainOfTrust" : true
+        },
+        "uri" : "https://fcbworkapp.com/xml/index.html",
+        "domain" : "fcbworkapp.com",
+        "port" : 443,
+        "protocol" : "https",
+        "location" : [ ],
+        "DNS" : {
+          "A" : [ {
+            "A" : "172.67.130.136",
+            "PTR" : ""
+          }, {
+            "A" : "104.21.3.92",
+            "PTR" : ""
+          } ],
+          "AAAA" : [ {
+            "A" : "2606:4700:3032::6815:35c",
+            "PTR" : ""
+          }, {
+            "A" : "2606:4700:3030::ac43:8288",
+            "PTR" : ""
+          } ],
+          "NS" : [ "tia.ns.cloudflare.com.", "zahir.ns.cloudflare.com." ],
+          "MX" : [ ],
+          "SOA" : {
+            "mname" : "ns.dns.cluster.local",
+            "rname" : "hostmaster.cluster.local",
+            "serial" : "1703766951"
+          },
+          "TXT" : [ ],
+          "DMARC" : [ ]
+        },
+        "serverInfo" : {
+          "bgpPrefix" : "172.67.128.0/20",
+          "allocatedDate" : "2015-02-25",
+          "ASName" : "CLOUDFLARENET, US",
+          "ASNumber" : "13335",
+          "city" : "",
+          "country" : "United States",
+          "latitude" : 37.751,
+          "longitude" : -97.822,
+          "ip" : "172.67.130.136"
+        },
+        "cipher" : [ ]
+      }, {
+        "source" : [ ],
+        "classificationCategory" : [ ],
+        "findings" : {
+          "expCheck" : false,
+          "hasProblem" : false,
+          "validChainOfTrust" : true
+        },
+        "uri" : "http://://",
+        "domain" : "",
+        "port" : 0,
+        "protocol" : "",
+        "location" : [ ],
+        "DNS" : {
+          "A" : [ ],
+          "AAAA" : [ ],
+          "NS" : [ ],
+          "MX" : [ ],
+          "SOA" : [ ],
+          "TXT" : [ ],
+          "DMARC" : [ ]
+        },
+        "serverInfo" : {
+          "bgpPrefix" : "",
+          "allocatedDate" : "",
+          "ASName" : "",
+          "ASNumber" : "",
+          "city" : "",
+          "country" : "",
+          "latitude" : 0,
+          "longitude" : 0,
+          "ip" : "Unavailable"
+        },
+        "cipher" : [ ]
+      }, {
+        "source" : [ ],
+        "classificationCategory" : [ ],
+        "findings" : {
+          "expCheck" : false,
+          "hasProblem" : false,
+          "validChainOfTrust" : true
+        },
+        "uri" : "https://fcbworkapp.com/xml/index.html#/",
+        "domain" : "fcbworkapp.com",
+        "port" : 443,
+        "protocol" : "https",
+        "location" : [ "com.common.bbh.config.RemoteAppConfigKt", "com.common.bbh.CommonMainActivity" ],
+        "DNS" : {
+          "A" : [ {
+            "A" : "172.67.130.136",
+            "PTR" : ""
+          }, {
+            "A" : "104.21.3.92",
+            "PTR" : ""
+          } ],
+          "AAAA" : [ {
+            "A" : "2606:4700:3032::6815:35c",
+            "PTR" : ""
+          }, {
+            "A" : "2606:4700:3030::ac43:8288",
+            "PTR" : ""
+          } ],
+          "NS" : [ "tia.ns.cloudflare.com.", "zahir.ns.cloudflare.com." ],
+          "MX" : [ ],
+          "SOA" : {
+            "mname" : "ns.dns.cluster.local",
+            "rname" : "hostmaster.cluster.local",
+            "serial" : "1703766951"
+          },
+          "TXT" : [ ],
+          "DMARC" : [ ]
+        },
+        "serverInfo" : {
+          "bgpPrefix" : "172.67.128.0/20",
+          "allocatedDate" : "2015-02-25",
+          "ASName" : "CLOUDFLARENET, US",
+          "ASNumber" : "13335",
+          "city" : "",
+          "country" : "United States",
+          "latitude" : 37.751,
+          "longitude" : -97.822,
+          "ip" : "172.67.130.136"
+        },
+        "cipher" : [ ]
+      } ]
+    }
+  },
+  "result" : 1,
+  "ContentInformation" : "Copyright 2023 bitdefender"
+}

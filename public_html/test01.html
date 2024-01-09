@@ -3,11 +3,15 @@
 <head>
 	<title>test</title>
 	<style>
-		section{
+		.section{
 			width:900px;
-			height:700px;
-			background-color:red;
-			margin-top: 10px;
+			height:10px;
+			background:red;
+		} 
+		.j{
+			background-color: red;
+			width:200px;
+			height:100px;
 		}
 	</style>
 </head>
@@ -17,40 +21,24 @@
 			var response = await fetch("upload-file/bit.json");
 			var dataget = await response.json();
 			console.log(dataget);
-			 for(var i=0;i<=5;i++){
-			 	//console.log(i);
 			 	var r = document.createElement('section');
-			 	r.id="page"+i;
-			 	document.body.appendChild(r);
+			 	r.className="page";
 			 	var len = dataget.report.androidAnalysis.usesPermission;
-			 	console.log(len.length);
-			 	var hi =4;
+			 	console.log(len.length-1);
+			 	var hi =len.length-1;
 			 	console.log(hi);
 				for(var j=0;j<=hi;j++){
-				//	console.log(j);
-					// var r1 =document.createElement('article');
-					document.getElementById(`page${i}`).innerHTML+=`<div class="first"><p>${dataget.report.androidAnalysis.usesPermission[j].kind}</p><i>${dataget.report.androidAnalysis.usesPermission[j].description}</i><b>${dataget.report.androidAnalysis.usesPermission[j].dangerous}</b></div>`;
-					hi=8;
-					j=5;
-					// if(j<=hi){
-					// 	var f = len.length-4;
-					// 	var g = len.length-f;
-					// 	j=g+1;
-					// 	hi=g+4;
-					// 	if(hi==len.length){
-					// 		break;
-					// 	}else{
-					// 		console.log('not equal...');
-					// 	}
-					// 	console.log(j,hi);
-					// 	console.log("complete task");
-					// }else if(hi==len.length){
-					// 	break;
-					// }
+					r.innerHTML+=`<p>${dataget.report.androidAnalysis.usesPermission[j].kind}</p><i>${dataget.report.androidAnalysis.usesPermission[j].description}</i><b>${dataget.report.androidAnalysis.usesPermission[j].dangerous}</b>`;
+					if(j==4 || j==8 || j==12 || j==16 || j==20 || j==24){
+						r.innerHTML+="<p class='section'>hello</p>";
+
+						if(hi==j){
+							break;
+						}
+					}
+					// document.getElementById(`page${i}`).innerHTML+=`<div class="first"><p>${dataget.report.androidAnalysis.usesPermission[j].kind}</p><i>${dataget.report.androidAnalysis.usesPermission[j].description}</i><b>${dataget.report.androidAnalysis.usesPermission[j].dangerous}</b></div>`;
 				}
-				
-				
-			}
+				document.body.appendChild(r);
 		}
 		fetchjson();
 	</script>

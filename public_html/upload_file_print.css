@@ -1,47 +1,15 @@
-#table1{
-	background: rgb( 247, 244, 244 );
-	padding: 20px;
-	margin-top: 50px;
-	margin-left: 170px;
-	
-}
-.header{
-	color: green;
-	position: fixed;
-	
-}
+#table1{background: rgb( 247, 244, 244 );padding: 20px;margin-top: 50px;margin-left: 170px;}
+.header{color: green;position: fixed;}
 #software-name{display: none;}
-#table1 tr td{
-	font-size: 25px;
-}
-label{
-	display: none;
-}
-#body{
-	display: none;
-}
-h1{
-	color: green;
-	display: none;
-}
-input{
-	display: none;
-}
-button{
-	display: none;
-}
-input::placeholder{
-	color: white;
-}
-#im{
-	margin-top:440px;
-	margin-left: 250px;
-}
-#im2{
-	break-before: page;
-	margin-top:400px;
-	margin-left:300px;
-}
+#table1 tr td{font-size: 25px;}
+label{display: none;}
+#body{display: none;}
+h1{color: green;display: none;}
+input{display: none;}
+button{display: none;}
+input::placeholder{color: white;}
+#im{margin-top:440px;margin-left: 250px;}
+#im2{break-before: page;margin-top:400px;margin-left:300px;}
 /*       page 3 upper line   */
 
 #lineup3{break-before: page;height: 2px;background: rgb(122, 120, 120);}
@@ -187,3 +155,4 @@ span{display: inline-block;font-family:sans-serif ;margin-left:10px; }
 .biopar{margin: 20px;padding: 10px}
 .aps1{width:900px;height:100px;background: rgb(163,163,163);}
 #output1{display: none;}
+#linentc{break-after: page;}

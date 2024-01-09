@@ -1,5 +1,4 @@
 <?php
-//include 'connectdatabase.php';
 $server="localhost";
 $username="prashant";
 $pass="prashant1234567890@!#$";

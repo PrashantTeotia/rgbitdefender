@@ -7,12 +7,12 @@
 	<title>GET DATA</title>
 	<style type="text/css">
 		body{background:rgb(213, 207, 207);}
-		#table{width: 800px;margin-left: 12%;margin-top:3%;border-collapse: collapse;font-family:sans-serif ;background: rgb(  204, 204, 204 );color: rgb( 82, 82, 82 );border-radius: 6px;box-shadow:0px 0px 70px 1px rgb( 109, 109, 109);}
+		#table{width: 800px;margin-left: 3%;margin-top:3%;border-collapse: collapse;font-family:sans-serif ;background: rgb(  204, 204, 204 );color: rgb( 82, 82, 82 );border-radius: 6px;box-shadow:0px 0px 70px 1px rgb( 109, 109, 109);}
 		#table tr th{border-bottom: 2px solid rgb( 204, 204, 204 );padding: 10px;font-size: 11px;word-wrap: normal;}
 		#table tr td{font-size: 11px;padding: 10px;background: rgb(  238, 238, 238 );/*			border-bottom: 1px solid rgb(118,118,118);*/}
 		h1{color:rgb( 155, 156, 154 );font-family: sans-serif;text-align: center;}
-		button{background: rgb(255, 11, 11);color: rgb(12,16,1);border:0px solid red;padding: 8px;border-radius:35px; }
-		#deletedata{position: absolute;top:29px;left:907px;color:whitesmoke;font-family: sans-serif;font-weight: bolder;border-radius: 10px;border: 1px solid aliceblue;padding: 10px;box-shadow: inset 0px 0px 10px 1px rgb(172,172,172);}
+		button{background:rgb(176, 176, 176);color: rgb(12,16,1);border:0px solid red;padding: 8px;border-radius:5px; }
+		#deletedata{position: absolute;top:99px;left:907px;color:whitesmoke;font-size:12px;color:rgb(74, 74, 74);font-family: sans-serif;font-weight: bolder;border-radius: 10px;border: 1px solid aliceblue;padding: 10px;box-shadow: inset 0px 0px 10px 1px rgb(172,172,172);}
 	</style>
 </head>
 	<body>

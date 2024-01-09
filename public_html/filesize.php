@@ -1,5 +1,4 @@
 <?php
-//include 'connectdatabase.php';
 $server="localhost";
 $username="prashant";
 $pass="prashant1234567890@!#$";
@@ -16,14 +15,4 @@ if($row == null){
 }else{
 	echo $row['filesize'];
 }
-// $num = mysqli_num_rows($query);
-// //echo $num;
-// while($row=mysqli_fetch_assoc($query)){
-// 	if($row['filesize']>=0 && $row['filesize']<=480000){
-// 		echo "ok";
-// 		echo "<br>";
-// 	}else{
-// 		echo $row['filesize'];
-// 	}
-// }
 ?>

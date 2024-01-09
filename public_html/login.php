@@ -6,8 +6,10 @@
 	<!-- <link rel="stylesheet" type="text/css" href="_nav.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="signup.css"> -->
 	<title>signup</title>
-	<style>h1{color:#434b53;}body{background-color: #c1c6ca;}.successful{width:100%;height: 20px;background-color:rgb( 180, 255, 160 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}.error{width:100%;height: 20px;background-color:rgb( 254, 84, 76 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}label{font-weight: bolder;}button{background-color: rgb(27, 89, 204);}
-
+	<style>h1{color:#434b53;}
+	body{background-image:url('software-images/pexels-lukas-590016.jpg');background-size:100% 190%; background-repeat: no-repeat;}
+	.successful{width:100%;height: 20px;background-color:rgb( 180, 255, 160 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}.error{width:100%;height: 20px;background-color:rgb( 254, 84, 76 );position: absolute;top:33px;font-size: 11px;padding: 5px;left:0px;}label{font-weight: bolder;}
+	button{background-color: rgb(27, 89, 204);}
 #main{background: rgb( 225, 223, 223 );width: 102%;height: 40px;margin-top:-10px;margin-left:-10px;box-shadow:0px 0px 10px rgb(159, 159, 159); }
 span{display: inline-block; padding:15px 10px 5px 10px;font-size:13px;font-family: arial;color: rgb(  151, 150, 150  );font-weight:bolder; }
 span:hover{color:rgb( 55, 54, 54 );cursor:default;}
@@ -21,7 +23,7 @@ input[type]{width:72%;height: 25px;background: white;border: 1px solid rgb( 177,
 input:focus{outline:2px solid rgb(0, 87, 249  );}
 label{text-align: left;font-size:12px;font-family:arial; color:rgb(113, 113, 114);letter-spacing: 1px;}
 p{font-size: 11px;font-family: sans-serif;color:rgb(113, 113, 114);}
-button{background: rgb(0, 87, 249 );padding: 8px 280px 8px 280px;border:0px;border-radius: 3px;color: rgb( 237, 243, 255);font-weight: bolder;}
+button{background: rgb(0, 87, 249 );padding: 1.10% 34% 1.10% 34%;border:0px;border-radius: 3px;color: rgb( 237, 243, 255);font-weight: bolder;}
 button:active{box-shadow: 0px 0px 4px 1px rgb( 0, 76, 219 );}
 </style>
 </head>
@@ -40,21 +42,10 @@ button:active{box-shadow: 0px 0px 4px 1px rgb( 0, 76, 219 );}
 		}
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		// $cpassword = $_POST['cpassword'];
-
-		// if(isset($username=$_POST['username']) || isset($password=$_POST['password'])|| isset($cpassword=$_POST['cpassword'])){
-		// 	echo "ok";
-		// }
-		
-		
 		$exits = false;
-		
 		$sql = "select * from accounttable where username='$username' AND password='$password'";
 		$result = mysqli_query($conn,$sql);
 		$num = mysqli_num_rows($result);
-		// if($num == 1){
-		// 	echo "ok";
-		// }
 		if($num == 1){
 			$login =true;
 			echo "ok";
@@ -68,14 +59,6 @@ button:active{box-shadow: 0px 0px 4px 1px rgb( 0, 76, 219 );}
 			$showERROR ="<div class='error'><strong>invalid credentials</strong></div>";
 			echo $showERROR;
 		}
-		
-		// if($result){
-		// 	$showmessage=true;
-		// 	echo "<div class='successful'><b>successfully account created...</b></div>";
-		// }else{
-		// 	$err = true;
-		// 	echo "<div class='error'><b> account not created</b></div>";
-		// }
 	}
 	?>
 	<?php require '_nav.php'?>
@@ -90,7 +73,6 @@ button:active{box-shadow: 0px 0px 4px 1px rgb( 0, 76, 219 );}
 				<label>Password</label><br>
 				<input type="Password" name="password"placeholder="password"><br><br>
 			</div>
-			<!-- <p>Make save to type the same password</p> -->
 			<button type="submit" class='signup'>Login</button>
 		</form>
 	</div>
